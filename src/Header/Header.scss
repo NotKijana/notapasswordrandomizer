@@ -1,0 +1,15 @@
+.Header {
+    grid-column: 1/ -1;
+    grid-row: 1;
+    height: 80%;
+    margin-bottom: 5rem;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-weight: 700;
+
+    &_text {
+        font-size: 4rem;
+    }
+}

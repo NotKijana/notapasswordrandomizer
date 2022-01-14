@@ -1,0 +1,21 @@
+.Footer {
+    grid-row: 3;
+    grid-column: 1 / -1;
+    
+    height: 100%;
+
+
+    align-self: center;
+    display: flex;
+    background-color: #181C1F;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+    a {
+        color: #ffffff;
+        &:hover {
+            color: #5fc0c4
+        }
+    }
+}
