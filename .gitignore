@@ -10,6 +10,7 @@
 
 # production
 /build
+Icon?
 
 # misc
 .DS_Store

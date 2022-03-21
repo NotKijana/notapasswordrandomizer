@@ -1,9 +1,8 @@
-import './App.scss';
+import './styles/App.scss';
 import { useState, React } from 'react';
-import Header from "./Header/Header";
-import Footer from './Footer/Footer';
-import Output from "./Output/Output";
-import Form from "./Form/Form";
+import Footer from './components/Footer';
+import Output from "./components/Output";
+import Form from "./components/Form";
 
 function App() {
   const [password, setPassword] = useState('');
@@ -24,29 +23,34 @@ function App() {
   function validateForm(e) {
     let passwordRegex = new RegExp('[A-Za-z0-9._:$!%]+$');
     let minLength = 8;
-    let maxLength = 14;
+    let maxLength = 16;
     setPassword(e);
-    if(password.length <= maxLength && password.length >= minLength) {
-      if(passwordRegex.test(password)) {
-        setValidation('correct');
-      } else {
+    setOutput('');
+    if(e.length <= maxLength && e.length >= minLength) {
+      if(password.includes(' ')) {
         setValidation('wrong');
       }
-    }
-    if(password.includes(' ')) {
+      if(passwordRegex.test(password)) {
+        setValidation('correct');
+      }
+    } else {
       setValidation('wrong');
     }
   }
 
   return (
     <div className="App">
-      <Header />
+        <header className="Header">
+          <h1 className='Header_text'>Password Randomizer</h1>
+        </header>
       <main className='main'>
         <Form password={password} submitOutput={submitOutput}
           validate={validate} validateForm={validateForm}
         />
-        <Output validate={validate} setValidation={setValidation} 
-        output={output} password={password}/>
+        {output &&
+          <Output validate={validate} setValidation={setValidation} 
+          output={output} password={password}/> 
+        }
       </main>
       <Footer />
     </div>

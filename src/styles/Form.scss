@@ -8,8 +8,6 @@
     flex-direction: column;
     justify-content: space-around;
     
-    &_container {
-    }
     &_input {
         &.text {
             background-color: transparent;
@@ -37,6 +35,9 @@
     }
 
     &_btn {
+        &.shuffle {
+            margin-top: 2rem;
+        }
         font-size: 1.8rem;
         padding: 0rem 1.5rem;
         height: 4rem;
