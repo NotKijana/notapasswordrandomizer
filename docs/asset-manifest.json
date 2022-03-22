@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/notapasswordrandomizer/static/css/main.d4175cd1.css",
+    "main.js": "/notapasswordrandomizer/static/js/main.986f37c8.js",
+    "index.html": "/notapasswordrandomizer/index.html",
+    "main.d4175cd1.css.map": "/notapasswordrandomizer/static/css/main.d4175cd1.css.map",
+    "main.986f37c8.js.map": "/notapasswordrandomizer/static/js/main.986f37c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4175cd1.css",
+    "static/js/main.986f37c8.js"
+  ]
+}
